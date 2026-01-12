@@ -1,0 +1,88 @@
+{
+	"name": "odoo-timesheet-timer",
+	"displayName": "Odoo Timesheet Timer",
+	"description": "Manage Odoo timesheet timers from VS Code/Cursor",
+	"version": "0.0.1",
+	"publisher": "odoo-timesheet",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rachmataditiya/timesheet-timer"
+	},
+	"homepage": "https://github.com/rachmataditiya/timesheet-timer#readme",
+	"bugs": {
+		"url": "https://github.com/rachmataditiya/timesheet-timer/issues"
+	},
+	"engines": {
+		"vscode": "^1.80.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "odoo.login",
+				"title": "Login to Odoo",
+				"category": "Odoo"
+			},
+			{
+				"command": "odoo.startTimer",
+				"title": "Start Timer",
+				"category": "Odoo",
+				"icon": "$(play)"
+			},
+			{
+				"command": "odoo.stopTimer",
+				"title": "Stop Timer",
+				"category": "Odoo",
+				"icon": "$(stop)"
+			},
+			{
+				"command": "odoo.showTimerPopup",
+				"title": "Show Timer Control",
+				"category": "Odoo"
+			},
+			{
+				"command": "odoo.refreshTimer",
+				"title": "Refresh Timer Status",
+				"category": "Odoo"
+			}
+		],
+		"configuration": {
+			"title": "Odoo Timesheet Timer",
+			"properties": {
+				"odoo.serverUrl": {
+					"type": "string",
+					"default": "",
+					"description": "Odoo server URL (e.g., https://odoo.example.com)"
+				},
+				"odoo.database": {
+					"type": "string",
+					"default": "",
+					"description": "Odoo database name"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"package": "vsce package"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.80.0",
+		"@types/node": "^20.0.0",
+		"typescript": "^5.0.0",
+		"@vscode/vsce": "^2.22.0"
+	},
+	"dependencies": {
+		"axios": "^1.6.0"
+	}
+}
+
