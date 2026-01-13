@@ -8,3 +8,4 @@ tsconfig.json
 **/node_modules/**
 !node_modules/axios/**
 !node_modules/form-data/**
+!node_modules/combined-stream/**
