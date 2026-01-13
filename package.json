@@ -1,5 +1,5 @@
 {
-	"name": "timesheet-timer-vscode",
+	"name": "odoo-timesheet-timer",
 	"displayName": "Odoo Timesheet Timer",
 	"description": "Manage Odoo timesheet timers from VS Code/Cursor",
 	"version": "0.0.1",
