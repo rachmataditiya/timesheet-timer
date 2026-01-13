@@ -2,7 +2,7 @@
 	"name": "odoo-timesheet-timer",
 	"displayName": "Odoo Timesheet Timer",
 	"description": "Manage Odoo timesheet timers from VS Code/Cursor",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "arkanadigital",
 	"license": "MIT",
 	"repository": {
